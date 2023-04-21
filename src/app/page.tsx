@@ -5,6 +5,9 @@ import {
   Library,
   Plus,
   Download,
+  ChevronLeft,
+  ChevronRight,
+  ChevronDown,
 } from "lucide-react";
 
 export default function Home() {
@@ -132,9 +135,34 @@ export default function Home() {
             Install App
           </a>
         </aside>
-        <main className='flex-1 p-6'>
-          main line
-          <div>navbar</div>
+        <main className='flex-1 px-8 py-4'>
+          <nav className='w-full flex justify-between items-center'>
+            <div className='flex gap-4'>
+              <button className='w-8 h-8 bg-zinc-950 rounded-full text-center flex items-center justify-center'>
+                <ChevronLeft />
+              </button>
+              <button className='w-8 h-8 bg-zinc-950 rounded-full text-center flex items-center justify-center'>
+                <ChevronRight />
+              </button>
+            </div>
+
+            <div className='flex items-center justify-center gap-4 text-sm font-extrabold'>
+              <button className='border border-zinc-100 h-8 text-center m-auto flex items-center px-3 py-4 rounded-full'>
+                Upgrade
+              </button>
+              <button className='bg-zinc-950 h-8 text-center m-auto flex items-center px-3 py-4 rounded-full gap-2'>
+                account_name
+                <ChevronDown size={16} />
+              </button>
+            </div>
+          </nav>
+
+          <div>
+            <h1>Good afternoon</h1>
+
+
+          </div>
+
           {/* {children} */}
         </main>
       </div>
