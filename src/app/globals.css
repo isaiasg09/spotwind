@@ -14,4 +14,18 @@
   -moz-transition: 0.2s;
   -ms-transition: 0.2s;
   -o-transition: 0.2s;
+  scrollbar-width: 12px;
+  scrollbar-color: rgb(59, 59, 59);
+  scrollbar-track-color: white;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(59, 59, 59);
+}
+*::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(92, 92, 92);
 }

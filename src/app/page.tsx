@@ -9,10 +9,11 @@ import {
   ChevronRight,
   ChevronDown,
 } from "lucide-react";
+import profilePic from "../../public/profile.webp";
 
 export default function Home() {
   return (
-    <div className='h-screen flex flex-col'>
+    <div className='h-screen flex flex-col overflow-hidden'>
       <div className='flex flex-row flex-1'>
         <aside className='w-72 bg-zinc-950 flex flex-col p-6 resize-x overflow-auto max-w-sm min-w-[190px] relative'>
           <Image
@@ -93,40 +94,67 @@ export default function Home() {
                     <path d='M3.75 0A1.75 1.75 0 0 0 2 1.75v12.952c0 1.051 1.22 1.633 2.037.972l3.962-3.208 3.943 3.204c.817.663 2.038.082 2.038-.97V1.75A1.75 1.75 0 0 0 12.23 0H3.75z'></path>
                   </svg>
                 </div>
-                Your episodes
+                Your Episodes
               </a>
             </div>
           </nav>
 
           <hr className='my-4 opacity-20' />
 
-          <nav className='flex flex-col text-sm font-medium space-y-3 text-zinc-500'>
-            <a href='#' className='cursor-default hover:brightness-125'>
+          <nav className='flex flex-col text-sm font-medium space-y-3 text-zinc-400 overflow-y-auto h-[475px] scr'>
+            <a href='#' className='cursor-default hover:text-zinc-100'>
               Playlist 1
             </a>
-            <a href='#' className='cursor-default hover:brightness-200 '>
+            <a href='#' className='cursor-default hover:text-zinc-100 '>
               Playlist 2
             </a>
-            <a href='#' className='cursor-default hover:brightness-200'>
+            <a href='#' className='cursor-default hover:text-zinc-100'>
               Playlist 3
             </a>
-            <a href='#' className='cursor-default hover:brightness-200'>
+            <a href='#' className='cursor-default hover:text-zinc-100'>
               Playlist 4
             </a>
-            <a href='#' className='cursor-default hover:brightness-200'>
+            <a href='#' className='cursor-default hover:text-zinc-100'>
               Playlist 5
             </a>
-            <a href='#' className='cursor-default hover:brightness-200'>
+            <a href='#' className='cursor-default hover:text-zinc-100'>
               Playlist 6
             </a>
-            <a href='#' className='cursor-default hover:brightness-200'>
+            <a href='#' className='cursor-default hover:text-zinc-100'>
               Playlist 7
             </a>
-            <a href='#' className='cursor-default hover:brightness-200'>
+            <a href='#' className='cursor-default hover:text-zinc-100'>
               Playlist 8
             </a>
-            <a href='#' className='cursor-default hover:brightness-200'>
+            <a href='#' className='cursor-default hover:text-zinc-100'>
               Group
+            </a>
+            <a href='#' className='cursor-default hover:text-zinc-100'>
+              Playlist 8
+            </a>
+            <a href='#' className='cursor-default hover:text-zinc-100'>
+              Playlist 8
+            </a>
+            <a href='#' className='cursor-default hover:text-zinc-100'>
+              Playlist 8
+            </a>
+            <a href='#' className='cursor-default hover:text-zinc-100'>
+              Playlist 8
+            </a>
+            <a href='#' className='cursor-default hover:text-zinc-100'>
+              Playlist 8
+            </a>
+            <a href='#' className='cursor-default hover:text-zinc-100'>
+              Playlist 8
+            </a>
+            <a href='#' className='cursor-default hover:text-zinc-100'>
+              Playlist 8
+            </a>
+            <a href='#' className='cursor-default hover:text-zinc-100'>
+              Playlist 8
+            </a>
+            <a href='#' className='cursor-default hover:text-zinc-100'>
+              Playlist 8
             </a>
           </nav>
 
@@ -146,11 +174,18 @@ export default function Home() {
               </button>
             </div>
 
-            <div className='flex items-center justify-center gap-4 text-sm font-extrabold'>
-              <button className='border border-zinc-100 h-8 text-center m-auto flex items-center px-3 py-4 rounded-full'>
+            <div className='flex items-center justify-center gap-4 text-sm font-bold'>
+              <button className='border  border-zinc-100 h-8 text-center m-auto flex items-center px-3 py-4 rounded-full hover:scale-105'>
                 Upgrade
               </button>
-              <button className='bg-zinc-950 h-8 text-center m-auto flex items-center px-3 py-4 rounded-full gap-2'>
+              <button className='bg-zinc-950 h-8 text-center m-auto flex items-center pr-3 py-4 rounded-full gap-2 hover:bg-zinc-900'>
+                <Image
+                  src={profilePic}
+                  alt='profile image'
+                  width={28}
+                  height={28}
+                  className='rounded-full'
+                ></Image>
                 account_name
                 <ChevronDown size={16} />
               </button>
@@ -159,8 +194,6 @@ export default function Home() {
 
           <div>
             <h1>Good afternoon</h1>
-
-
           </div>
 
           {/* {children} */}
