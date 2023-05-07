@@ -10,6 +10,7 @@ import {
   ChevronDown,
 } from "lucide-react";
 import profilePic from "../../public/profile.webp";
+import playListCover from "../../public/playlist-c.jpg";
 
 export default function Home() {
   return (
@@ -192,8 +193,75 @@ export default function Home() {
             </div>
           </nav>
 
-          <div>
-            <h1>Good afternoon</h1>
+          <div className='pt-6'>
+            <h1 className='text-3xl font-bold'>Good afternoon</h1>
+
+            <div className='flex w-full gap-6 mt-6'>
+              <div className='flex flex-col justify-between w-full gap-3'>
+                <div className='h-20 w-full bg-[hsla(0,0%,100%,.1)] rounded-md flex items-center'>
+                  <Image
+                    src={playListCover}
+                    alt='profile image'
+                    className='h-20 w-auto rounded-l-md'
+                  />
+
+                  <h3 className='ml-4 font-bold'>Playlist</h3>
+                </div>
+                <div className='h-20 w-full bg-[hsla(0,0%,100%,.1)] rounded-md flex items-center'>
+                  <Image
+                    src={playListCover}
+                    alt='profile image'
+                    className='h-20 w-auto rounded-l-md'
+                  />
+
+                  <h3 className='ml-4 font-bold'>Playlist</h3>
+                </div>
+              </div>
+              <div className='flex flex-col justify-between w-full'>
+                <div className='h-20 w-full bg-[hsla(0,0%,100%,.1)] rounded-md flex items-center'>
+                  <Image
+                    src={playListCover}
+                    alt='profile image'
+                    className='h-20 w-auto rounded-l-md'
+                  />
+
+                  <h3 className='ml-4 font-bold'>Playlist</h3>
+                </div>
+                <div className='h-20 w-full bg-[hsla(0,0%,100%,.1)] rounded-md flex items-center'>
+                  <Image
+                    src={playListCover}
+                    alt='profile image'
+                    className='h-20 w-auto rounded-l-md'
+                  />
+
+                  <h3 className='ml-4 font-bold'>Playlist</h3>
+                </div>
+              </div>
+              <div className='flex flex-col justify-between w-full'>
+                <div className='h-20 w-full bg-[hsla(0,0%,100%,.1)] rounded-md flex items-center'>
+                  <Image
+                    src={playListCover}
+                    alt='profile image'
+                    className='h-20 w-auto rounded-l-md'
+                  />
+
+                  <h3 className='ml-4 font-bold'>Playlist</h3>
+                </div>
+                <div className='h-20 w-full bg-[hsla(0,0%,100%,.1)] rounded-md flex items-center'>
+                  <Image
+                    src={playListCover}
+                    alt='profile image'
+                    className='h-20 w-auto rounded-l-md'
+                  />
+
+                  <h3 className='ml-4 font-bold'>Playlist</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className='pt-6'>
+            <h2 className='text-2xl font-bold'>Made For you</h2>
           </div>
 
           {/* {children} */}
