@@ -1,5 +1,5 @@
-## Spotwind
+# Spotwind
 a spotify clone made with tailwindcss and nextjs
 
-# Link:
-[spotwind.vercel.app](spotwind.vercel.app)
+## Link:
+[spotwind.vercel.app](https://spotwind.vercel.app)
