@@ -164,103 +164,220 @@ export default function Home() {
             Install App
           </a>
         </aside>
-        <main className='flex-1 px-8 py-4'>
-          <nav className='w-full flex justify-between items-center'>
-            <div className='flex gap-4'>
-              <button className='w-8 h-8 bg-zinc-950 rounded-full text-center flex items-center justify-center'>
-                <ChevronLeft />
-              </button>
-              <button className='w-8 h-8 bg-zinc-950 rounded-full text-center flex items-center justify-center'>
-                <ChevronRight />
-              </button>
-            </div>
 
-            <div className='flex items-center justify-center gap-4 text-sm font-bold'>
-              <button className='border  border-zinc-100 h-8 text-center m-auto flex items-center px-3 py-4 rounded-full hover:scale-105'>
-                Upgrade
-              </button>
-              <button className='bg-zinc-950 h-8 text-center m-auto flex items-center pr-3 py-4 rounded-full gap-2 hover:bg-zinc-900'>
-                <Image
-                  src={profilePic}
-                  alt='profile image'
-                  width={28}
-                  height={28}
-                  className='rounded-full'
-                ></Image>
-                account_name
-                <ChevronDown size={16} />
-              </button>
-            </div>
-          </nav>
-
-          <div className='pt-6'>
-            <h1 className='text-3xl font-bold'>Good afternoon</h1>
-
-            <div className='flex w-full gap-6 mt-6'>
-              <div className='flex flex-col justify-between w-full gap-3'>
-                <div className='h-20 w-full bg-[hsla(0,0%,100%,.1)] rounded-md flex items-center'>
-                  <Image
-                    src={playListCover}
-                    alt='profile image'
-                    className='h-20 w-auto rounded-l-md'
-                  />
-
-                  <h3 className='ml-4 font-bold'>Playlist</h3>
-                </div>
-                <div className='h-20 w-full bg-[hsla(0,0%,100%,.1)] rounded-md flex items-center'>
-                  <Image
-                    src={playListCover}
-                    alt='profile image'
-                    className='h-20 w-auto rounded-l-md'
-                  />
-
-                  <h3 className='ml-4 font-bold'>Playlist</h3>
-                </div>
+        <main className='flex-1'>
+          <div className='background-gradient'>
+            <nav className='w-full flex justify-between items-center px-8 py-4'>
+              <div className='flex gap-4'>
+                <button className='w-8 h-8 bg-zinc-950 rounded-full text-center flex items-center justify-center'>
+                  <ChevronLeft />
+                </button>
+                <button className='w-8 h-8 bg-zinc-950 rounded-full text-center flex items-center justify-center'>
+                  <ChevronRight />
+                </button>
               </div>
-              <div className='flex flex-col justify-between w-full'>
-                <div className='h-20 w-full bg-[hsla(0,0%,100%,.1)] rounded-md flex items-center'>
-                  <Image
-                    src={playListCover}
-                    alt='profile image'
-                    className='h-20 w-auto rounded-l-md'
-                  />
 
-                  <h3 className='ml-4 font-bold'>Playlist</h3>
-                </div>
-                <div className='h-20 w-full bg-[hsla(0,0%,100%,.1)] rounded-md flex items-center'>
+              <div className='flex items-center justify-center gap-4 text-sm font-bold'>
+                <button className='border  border-zinc-100 h-8 text-center m-auto flex items-center px-3 py-4 rounded-full hover:scale-105'>
+                  Upgrade
+                </button>
+                <button className='bg-zinc-950 h-8 text-center m-auto flex items-center pr-3 py-4 rounded-full gap-2 hover:bg-zinc-900'>
                   <Image
-                    src={playListCover}
+                    src={profilePic}
                     alt='profile image'
-                    className='h-20 w-auto rounded-l-md'
-                  />
-
-                  <h3 className='ml-4 font-bold'>Playlist</h3>
-                </div>
+                    width={28}
+                    height={28}
+                    className='rounded-full'
+                  ></Image>
+                  account_name
+                  <ChevronDown size={16} />
+                </button>
               </div>
-              <div className='flex flex-col justify-between w-full'>
-                <div className='h-20 w-full bg-[hsla(0,0%,100%,.1)] rounded-md flex items-center'>
-                  <Image
-                    src={playListCover}
-                    alt='profile image'
-                    className='h-20 w-auto rounded-l-md'
-                  />
+            </nav>
 
-                  <h3 className='ml-4 font-bold'>Playlist</h3>
+            <div className='pt-6 px-8 py-4'>
+              <h1 className='text-3xl font-bold'>Good afternoon</h1>
+
+              <div className='flex w-full gap-6 mt-6'>
+                <div className='flex flex-col justify-between w-full gap-3'>
+                  <div className='h-20 w-full bg-[hsla(0,0%,100%,.1)] rounded-md flex items-center hover:bg-[hsla(0,0%,100%,.2)] cursor-pointer group'>
+                    <Image
+                      src={playListCover}
+                      alt='profile image'
+                      className='h-20 w-auto rounded-l-md playlist-cover'
+                    />
+
+                    <div className='p-4 flex flex-row justify-between items-center w-full'>
+                      <h3 className='font-bold'>Playlist</h3>
+
+                      <button className='rounded-full bg-[#1ED760] p-1 shadow-circle opacity-0 :not scale-90 group-hover:opacity-100 group-hover:scale-100 transition-all ease-in-out active:!scale-95 active:brightness-50'>
+                        <svg
+                          width='40'
+                          height='40'
+                          viewBox='0 0 56 56'
+                          fill='none'
+                          xmlns='http://www.w3.org/2000/svg'
+                        >
+                          <path
+                            fill-rule='evenodd'
+                            clip-rule='evenodd'
+                            d='M40.2034 27.5619C40.5488 27.7519 40.5488 28.2481 40.2034 28.4381L21.741 38.5925C21.4077 38.7757 21 38.5347 21 38.1544V17.8456C21 17.4653 21.4077 17.2243 21.741 17.4075L40.2034 27.5619Z'
+                            fill='black'
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div className='h-20 w-full bg-[hsla(0,0%,100%,.1)] rounded-md flex items-center hover:bg-[hsla(0,0%,100%,.2)] cursor-pointer group'>
+                    <Image
+                      src={playListCover}
+                      alt='profile image'
+                      className='h-20 w-auto rounded-l-md playlist-cover'
+                    />
+
+                    <div className='p-4 flex flex-row justify-between items-center w-full'>
+                      <h3 className='font-bold'>Playlist</h3>
+
+                      <button className='rounded-full bg-[#1ED760] p-1 shadow-circle opacity-0 :not scale-90 group-hover:opacity-100 group-hover:scale-100 transition-all ease-in-out active:!scale-95 active:brightness-50'>
+                        <svg
+                          width='40'
+                          height='40'
+                          viewBox='0 0 56 56'
+                          fill='none'
+                          xmlns='http://www.w3.org/2000/svg'
+                        >
+                          <path
+                            fill-rule='evenodd'
+                            clip-rule='evenodd'
+                            d='M40.2034 27.5619C40.5488 27.7519 40.5488 28.2481 40.2034 28.4381L21.741 38.5925C21.4077 38.7757 21 38.5347 21 38.1544V17.8456C21 17.4653 21.4077 17.2243 21.741 17.4075L40.2034 27.5619Z'
+                            fill='black'
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
                 </div>
-                <div className='h-20 w-full bg-[hsla(0,0%,100%,.1)] rounded-md flex items-center'>
-                  <Image
-                    src={playListCover}
-                    alt='profile image'
-                    className='h-20 w-auto rounded-l-md'
-                  />
+                <div className='flex flex-col justify-between w-full'>
+                  <div className='h-20 w-full bg-[hsla(0,0%,100%,.1)] rounded-md flex items-center hover:bg-[hsla(0,0%,100%,.2)] cursor-pointer group'>
+                    <Image
+                      src={playListCover}
+                      alt='profile image'
+                      className='h-20 w-auto rounded-l-md playlist-cover'
+                    />
 
-                  <h3 className='ml-4 font-bold'>Playlist</h3>
+                    <div className='p-4 flex flex-row justify-between items-center w-full'>
+                      <h3 className='font-bold'>Playlist</h3>
+
+                      <button className='rounded-full bg-[#1ED760] p-1 shadow-circle opacity-0 :not scale-90 group-hover:opacity-100 group-hover:scale-100 transition-all ease-in-out active:!scale-95 active:brightness-50'>
+                        <svg
+                          width='40'
+                          height='40'
+                          viewBox='0 0 56 56'
+                          fill='none'
+                          xmlns='http://www.w3.org/2000/svg'
+                        >
+                          <path
+                            fill-rule='evenodd'
+                            clip-rule='evenodd'
+                            d='M40.2034 27.5619C40.5488 27.7519 40.5488 28.2481 40.2034 28.4381L21.741 38.5925C21.4077 38.7757 21 38.5347 21 38.1544V17.8456C21 17.4653 21.4077 17.2243 21.741 17.4075L40.2034 27.5619Z'
+                            fill='black'
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div className='h-20 w-full bg-[hsla(0,0%,100%,.1)] rounded-md flex items-center hover:bg-[hsla(0,0%,100%,.2)] cursor-pointer group'>
+                    <Image
+                      src={playListCover}
+                      alt='profile image'
+                      className='h-20 w-auto rounded-l-md playlist-cover'
+                    />
+
+                    <div className='p-4 flex flex-row justify-between items-center w-full'>
+                      <h3 className='font-bold'>Playlist</h3>
+
+                      <button className='rounded-full bg-[#1ED760] p-1 shadow-circle opacity-0 :not scale-90 group-hover:opacity-100 group-hover:scale-100 transition-all ease-in-out active:!scale-95 active:brightness-50'>
+                        <svg
+                          width='40'
+                          height='40'
+                          viewBox='0 0 56 56'
+                          fill='none'
+                          xmlns='http://www.w3.org/2000/svg'
+                        >
+                          <path
+                            fill-rule='evenodd'
+                            clip-rule='evenodd'
+                            d='M40.2034 27.5619C40.5488 27.7519 40.5488 28.2481 40.2034 28.4381L21.741 38.5925C21.4077 38.7757 21 38.5347 21 38.1544V17.8456C21 17.4653 21.4077 17.2243 21.741 17.4075L40.2034 27.5619Z'
+                            fill='black'
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div className='flex flex-col justify-between w-full'>
+                  <div className='h-20 w-full bg-[hsla(0,0%,100%,.1)] rounded-md flex items-center hover:bg-[hsla(0,0%,100%,.2)] cursor-pointer group'>
+                    <Image
+                      src={playListCover}
+                      alt='profile image'
+                      className='h-20 w-auto rounded-l-md playlist-cover'
+                    />
+
+                    <div className='p-4 flex flex-row justify-between items-center w-full'>
+                      <h3 className='font-bold'>Playlist</h3>
+
+                      <button className='rounded-full bg-[#1ED760] p-1 shadow-circle opacity-0 :not scale-90 group-hover:opacity-100 group-hover:scale-100 transition-all ease-in-out active:!scale-95 active:brightness-50'>
+                        <svg
+                          width='40'
+                          height='40'
+                          viewBox='0 0 56 56'
+                          fill='none'
+                          xmlns='http://www.w3.org/2000/svg'
+                        >
+                          <path
+                            fill-rule='evenodd'
+                            clip-rule='evenodd'
+                            d='M40.2034 27.5619C40.5488 27.7519 40.5488 28.2481 40.2034 28.4381L21.741 38.5925C21.4077 38.7757 21 38.5347 21 38.1544V17.8456C21 17.4653 21.4077 17.2243 21.741 17.4075L40.2034 27.5619Z'
+                            fill='black'
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div className='h-20 w-full bg-[hsla(0,0%,100%,.1)] rounded-md flex items-center hover:bg-[hsla(0,0%,100%,.2)] cursor-pointer group'>
+                    <Image
+                      src={playListCover}
+                      alt='profile image'
+                      className='h-20 w-auto rounded-l-md playlist-cover'
+                    />
+
+                    <div className='p-4 flex flex-row justify-between items-center w-full'>
+                      <h3 className='font-bold'>Playlist</h3>
+
+                      <button className='rounded-full bg-[#1ED760] p-1 shadow-circle opacity-0 :not scale-90 group-hover:opacity-100 group-hover:scale-100 transition-all ease-in-out active:!scale-95 active:brightness-50'>
+                        <svg
+                          width='40'
+                          height='40'
+                          viewBox='0 0 56 56'
+                          fill='none'
+                          xmlns='http://www.w3.org/2000/svg'
+                        >
+                          <path
+                            fill-rule='evenodd'
+                            clip-rule='evenodd'
+                            d='M40.2034 27.5619C40.5488 27.7519 40.5488 28.2481 40.2034 28.4381L21.741 38.5925C21.4077 38.7757 21 38.5347 21 38.1544V17.8456C21 17.4653 21.4077 17.2243 21.741 17.4075L40.2034 27.5619Z'
+                            fill='black'
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className='pt-6'>
+          <div className='pt-6 px-8 py-4'>
             <h2 className='text-2xl font-bold'>Made For you</h2>
           </div>
 
