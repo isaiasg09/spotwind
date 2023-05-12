@@ -8,15 +8,19 @@ import {
   ChevronLeft,
   ChevronRight,
   ChevronDown,
+  Heart,
+  PictureInPicture2
 } from "lucide-react";
 import profilePic from "../../public/profile.webp";
 import playListCover from "../../public/playlist-c.jpg";
+import mix from "../../public/mix.jpg";
+import albumCover from "../../public/album-cover.webp";
 
 export default function Home() {
   return (
     <div className='h-screen flex flex-col overflow-hidden'>
       <div className='flex flex-row flex-1'>
-        <aside className='w-72 bg-zinc-950 flex flex-col p-6 resize-x overflow-auto max-w-sm min-w-[190px] relative'>
+        <aside className='w-72 bg-zinc-950 flex flex-col p-6 pb-0 resize-x overflow-auto max-w-sm min-w-[190px] relative'>
           <Image
             src={
               "https://logodownload.org/wp-content/uploads/2016/09/Spotify-logo.png"
@@ -159,10 +163,12 @@ export default function Home() {
             </a>
           </nav>
 
-          <a className='flex items-center gap-4 absolute bottom-4 text-sm font-medium m-auto cursor-pointer hover:brightness-200'>
-            <Download size={24} />
-            Install App
-          </a>
+          <div className='bg-zinc-950'>
+            <a className='flex items-center gap-4 text-sm font-medium m-auto cursor-pointer hover:brightness-200'>
+              <Download size={24} />
+              Install App
+            </a>
+          </div>
         </aside>
 
         <main className='flex-1'>
@@ -378,14 +384,152 @@ export default function Home() {
           </div>
 
           <div className='pt-6 px-8 py-4'>
-            <h2 className='text-2xl font-bold'>Made For you</h2>
-          </div>
+            <div className='flex flex-row justify-between items-center'>
+              <h2 className='text-2xl font-bold mb-5 cursor-pointer w-fit hover:underline'>
+                Made For you
+              </h2>
 
-          {/* {children} */}
+              <a href='#' className='hover:underline'>
+                Show all
+              </a>
+            </div>
+
+            <div className='flex flex-row items-center gap-6'>
+              <div className='flex flex-col gap-2 bg-zinc-900 h-72 p-4 rounded-lg cursor-pointer hover:bg-zinc-800 group'>
+                <div className='relative'>
+                  <Image
+                    src={mix}
+                    alt='mix cover'
+                    height={158}
+                    width={158}
+                    className='rounded-lg mix-cover'
+                  />
+                  <button className='rounded-full bg-[#1ED760] p-1 shadow-circle absolute bottom-3 right-1 opacity-0 :not translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all ease-in-out active:!scale-95 active:brightness-50'>
+                    <svg
+                      width='40'
+                      height='40'
+                      viewBox='0 0 56 56'
+                      fill='none'
+                      xmlns='http://www.w3.org/2000/svg'
+                    >
+                      <path
+                        fill-rule='evenodd'
+                        clip-rule='evenodd'
+                        d='M40.2034 27.5619C40.5488 27.7519 40.5488 28.2481 40.2034 28.4381L21.741 38.5925C21.4077 38.7757 21 38.5347 21 38.1544V17.8456C21 17.4653 21.4077 17.2243 21.741 17.4075L40.2034 27.5619Z'
+                        fill='black'
+                      />
+                    </svg>
+                  </button>
+                </div>
+
+                <h4 className='font-bold mt-2'>Daily Mix 1</h4>
+
+                <p>Artist, Artist </p>
+              </div>
+              <div className='flex flex-col gap-2 bg-zinc-900 h-72 p-4 rounded-lg cursor-pointer hover:bg-zinc-800 group'>
+                <div className='relative'>
+                  <Image
+                    src={mix}
+                    alt='mix cover'
+                    height={158}
+                    width={158}
+                    className='rounded-lg mix-cover'
+                  />
+                  <button className='rounded-full bg-[#1ED760] p-1 shadow-circle absolute bottom-3 right-1 opacity-0 :not translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all ease-in-out active:!scale-95 active:brightness-50'>
+                    <svg
+                      width='40'
+                      height='40'
+                      viewBox='0 0 56 56'
+                      fill='none'
+                      xmlns='http://www.w3.org/2000/svg'
+                    >
+                      <path
+                        fill-rule='evenodd'
+                        clip-rule='evenodd'
+                        d='M40.2034 27.5619C40.5488 27.7519 40.5488 28.2481 40.2034 28.4381L21.741 38.5925C21.4077 38.7757 21 38.5347 21 38.1544V17.8456C21 17.4653 21.4077 17.2243 21.741 17.4075L40.2034 27.5619Z'
+                        fill='black'
+                      />
+                    </svg>
+                  </button>
+                </div>
+
+                <h4 className='font-bold mt-2'>Daily Mix 1</h4>
+
+                <p>Artist, Artist </p>
+              </div>
+              <div className='flex flex-col gap-2 bg-zinc-900 h-72 p-4 rounded-lg cursor-pointer hover:bg-zinc-800 group'>
+                <div className='relative'>
+                  <Image
+                    src={mix}
+                    alt='mix cover'
+                    height={158}
+                    width={158}
+                    className='rounded-lg mix-cover'
+                  />
+                  <button className='rounded-full bg-[#1ED760] p-1 shadow-circle absolute bottom-3 right-1 opacity-0 :not translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all ease-in-out active:!scale-95 active:brightness-50'>
+                    <svg
+                      width='40'
+                      height='40'
+                      viewBox='0 0 56 56'
+                      fill='none'
+                      xmlns='http://www.w3.org/2000/svg'
+                    >
+                      <path
+                        fill-rule='evenodd'
+                        clip-rule='evenodd'
+                        d='M40.2034 27.5619C40.5488 27.7519 40.5488 28.2481 40.2034 28.4381L21.741 38.5925C21.4077 38.7757 21 38.5347 21 38.1544V17.8456C21 17.4653 21.4077 17.2243 21.741 17.4075L40.2034 27.5619Z'
+                        fill='black'
+                      />
+                    </svg>
+                  </button>
+                </div>
+
+                <h4 className='font-bold mt-2'>Daily Mix 1</h4>
+
+                <p>Artist, Artist </p>
+              </div>
+            </div>
+          </div>
         </main>
       </div>
-      <footer className='w-screen bg-zinc-800 border-t border-zinc-700 p-6 '>
-        mine footer
+
+      <footer className='w-screen bg-zinc-800 border-t border-zinc-700 p-4 flex flex-row items-center justify-between album-cover'>
+        <div className='flex flex-row gap-4 items-center'>
+          <Image src={albumCover} alt='album cover' width={56} height={56} />
+
+          <div className='flex flex-col'>
+            <h3>Music</h3>
+
+            <p className=' text-zinc-400 text-sm leading-none'>
+              Artist, Artist, Artist, Artist
+            </p>
+          </div>
+
+          <Heart width={16} height={16} /> 
+          <PictureInPicture2 width={16} height={16} />
+        </div>
+
+        <div>
+          <div>
+            <button className='rounded-full bg-white p-1 shadow-circle absolute bottom-3 right-1 opacity-0 :not translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all ease-in-out active:!scale-95 active:brightness-50'>
+              <svg
+                width='40'
+                height='40'
+                viewBox='0 0 56 56'
+                fill='none'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <path
+                  fill-rule='evenodd'
+                  clip-rule='evenodd'
+                  d='M40.2034 27.5619C40.5488 27.7519 40.5488 28.2481 40.2034 28.4381L21.741 38.5925C21.4077 38.7757 21 38.5347 21 38.1544V17.8456C21 17.4653 21.4077 17.2243 21.741 17.4075L40.2034 27.5619Z'
+                  fill='black'
+                />
+              </svg>
+            </button>
+          </div>
+          <div></div>
+        </div>
       </footer>
     </div>
   );
