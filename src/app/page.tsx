@@ -9,7 +9,15 @@ import {
   ChevronRight,
   ChevronDown,
   Heart,
-  PictureInPicture2
+  PictureInPicture2,
+  Shuffle,
+  SkipBack,
+  SkipForward,
+  Repeat,
+  Mic2,
+  ListMusic,
+  MonitorSpeaker,
+  Volume2,
 } from "lucide-react";
 import profilePic from "../../public/profile.webp";
 import playListCover from "../../public/playlist-c.jpg";
@@ -505,30 +513,57 @@ export default function Home() {
             </p>
           </div>
 
-          <Heart width={16} height={16} /> 
+          <Heart width={16} height={16} />
           <PictureInPicture2 width={16} height={16} />
         </div>
 
-        <div>
-          <div>
-            <button className='rounded-full bg-white p-1 shadow-circle absolute bottom-3 right-1 opacity-0 :not translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all ease-in-out active:!scale-95 active:brightness-50'>
+        <div className='flex flex-col max-w-[500px] w-full justify-center items-center'>
+          <div className='flex flex-row items-center gap-6'>
+            <Shuffle width={20} height={20} />
+            <SkipBack width={24} height={24} />
+
+            <button className='rounded-full bg-white cursor-default'>
               <svg
-                width='40'
-                height='40'
+                width='36'
+                height='36'
                 viewBox='0 0 56 56'
-                fill='none'
+                fill='white'
                 xmlns='http://www.w3.org/2000/svg'
               >
                 <path
-                  fill-rule='evenodd'
-                  clip-rule='evenodd'
+                  fillRule='evenodd'
+                  clipRule='evenodd'
                   d='M40.2034 27.5619C40.5488 27.7519 40.5488 28.2481 40.2034 28.4381L21.741 38.5925C21.4077 38.7757 21 38.5347 21 38.1544V17.8456C21 17.4653 21.4077 17.2243 21.741 17.4075L40.2034 27.5619Z'
                   fill='black'
                 />
               </svg>
             </button>
+
+            <SkipForward width={24} height={24} />
+            <Repeat width={20} height={20} />
           </div>
-          <div></div>
+          <div className='flex flex-row items-center w-full gap-2'>
+            <span>0:00</span>
+
+            <div className='h-1 bg-zinc-600 w-full rounded-full'>
+              <div className='h-1 bg-zinc-200 w-36 rounded-full'></div>
+            </div>
+
+            <span>0:00</span>
+          </div>
+        </div>
+
+        <div className='flex flex-row items-center gap-4'>
+          <Mic2 width={20} height={20} />
+          <ListMusic width={20} height={20} />
+          <MonitorSpeaker width={20} height={20} />
+          <div className="flex flex-row gap-2 items-center">
+            <Volume2 width={20} height={20} />
+
+            <div className='h-1 bg-zinc-600 rounded-full w-24'>
+              <div className='h-1 bg-zinc-200 rounded-full w-1/2'></div>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
